@@ -9,7 +9,8 @@
 
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 55%;
 }
 
 nav .nav-left{
@@ -32,12 +33,66 @@ nav ul{
     text-align: center;
     border-left: none;
     border-right: none;
+    padding: 10%;
 }
 
+
 .main-columns{
-    border: 2px solid black;
+    border-bottom: 2px solid black;
+    justify-content: space-around;
     flex: 1;
     padding: 1rem;
     display: flex;
-    
+    padding: 0;
+    margin: 0;
+}
+
+.education-column{
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid black;
+}
+
+.main-columns > * {
+  width: 100vh;
+}
+
+.projects-column{
+    border-right:2px solid black ;
+}
+
+.project-box {
+    border-bottom: 2PX solid black;
+    background-color: grey;
+}
+
+.work-experience-block {
+    border-bottom: 2px solid black;
+}
+
+.reviews-row{
+    border-bottom: 2px solid black;
+    text-align: left;
+}
+
+.reviews-row h2{
+    text-align: center;
+}
+
+.block-of-reviews {
+    display: flex;
+    justify-content: space-around;
+    gap: 60PX;
+}
+
+.article-1, .article-2, .article-3 {
+    border: 2px solid black;    
+    border-radius: 8px;
+    margin: 20px;
+    padding: 20px;
+}
+
+footer{
+    border-bottom: 2px solid black;
+   text-align: center;
 }
