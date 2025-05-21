@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.site-container{
+    border: 2px solid black;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-left{
+    display: flex;
+}
+nav img {
+  height: 50px;
+  width: auto;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    list-style: none;
+}
+
+.hero{
+    border: 2px solid black;
+    text-align: center;
+    border-left: none;
+    border-right: none;
+}
+
+.main-columns{
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
