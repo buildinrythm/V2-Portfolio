@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+.secondary-font {
+  font-family: 'Fira Code', monospace;
+}
 
 .site-container{
     border: 2px solid black;
@@ -101,7 +107,7 @@ margin: 0;
 }
 
 .project-list > :last-child {
-    border-bottom: none;
+    
 }
 .work-experience-block {
     border-bottom: 2px solid black;
@@ -115,6 +121,7 @@ margin: 0;
 .reviews-row{
     border-bottom: 2px solid black;
     text-align: left;
+    padding: 4%;
 }
 
 .reviews-row h2{
@@ -141,4 +148,10 @@ margin: 0;
 footer{
     
    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main-columns {
+    flex-direction: column;
+  }
 }
