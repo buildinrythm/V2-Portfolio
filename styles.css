@@ -150,7 +150,25 @@ footer{
    text-align: center;
 }
 
+
 @media (max-width: 768px) {
+
+.site-container {
+    overflow: hidden;
+    width: 
+}
+
+.main-columns{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.projects-column{
+    padding: 0;
+    margin: 0;
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -173,10 +191,32 @@ padding: 20px;
 }
   .main-columns {
     flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
   }
 
   .projects-column{
     border-right: none;
   }
+
+  .open-source-block {
+    border-bottom: 2px solid black;
+  }
+
+  .education-column{
+    border-left: none;
+  }
+
+  .block-of-reviews {
+    display: flex;
+    justify-content: space-around;
+    gap: 60PX;
+}
+
+.article-1, .article-2, .article-3 {
+    border: 2px solid black;    
+    border-radius: 8px;
+    margin: 0px;
+    padding: 0;
+}
 }
