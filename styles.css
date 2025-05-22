@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   font-family: 'Inter', sans-serif;
 }
@@ -35,6 +37,10 @@ nav ul{
     list-style: none;
 }
 
+.nav-right{
+    display: flex;
+    gap: 20px;
+}
 nav a{
     text-decoration: none;
     color: inherit;
@@ -149,6 +155,7 @@ footer{
 }
 
 
+
 @media (max-width: 768px) {
 
 .site-container {
@@ -225,7 +232,7 @@ flex-wrap: wrap;
     gap: 60PX;
 }
 
-.article-1, .article-2, .article-3 {
+.article{
     border: 2px solid black;    
     border-radius: 8px;
     margin: 0px;
@@ -239,4 +246,45 @@ flex-wrap: wrap;
   width: 100%;
 }
 
+}
+
+/* Default light theme */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #0077cc;
+  --border-color: #000000;
+}
+
+/* Dark mode overrides */
+.dark-mode {
+  --bg-color: #000000;
+  --text-color: #f0f0f0;
+  --accent-color: #66ccff;
+  --border-color: #cccccc;
+}
+
+.hero, nav, .main-columns, footer, .reviews-row, .experience-column,
+.work-experience-block, .open-source-block, .article
+  {
+  border: 2px solid var(--border-color);
+  transition: border-color 0.3s ease;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+  color: var(--accent-color);
+   transition: accent-color 0.3s ease;
+}
+
+.project-box p {
+    transition: none;
+}
+
+.no-transition {
+  color: black;
 }

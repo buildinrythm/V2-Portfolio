@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Frontend Project, HTML, Roadmap.sh" />
+    <meta name="author" content="Joshua Agbor" />
     <title>HTML website</title>
     <link rel="stylesheet" href="styles.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <div class="site-container">
@@ -23,6 +25,7 @@
                 <li><a href="#" class="secondary-font">Articles</a></li>
                 <li><a href="#" class="secondary-font">Contact</a></li>
             </ul>
+            <button id="theme-toggle">🌙</button>
                 </div>
             </nav>
         </header>
@@ -38,19 +41,19 @@
                     </div>
                     <div class="project-list">
                     <div class="project-box">
-                    <a href="#"><p>HTML Only Portfolio</p></a>
+                    <a href="#"><p class="no-transition">HTML Only Portfolio</p></a>
                     </div>
                     <div class="project-box">
-                    <a href="#"><p>Calculator</p></a>
+                    <a href="#"><p class="no-transition">Calculator</p></a>
                     </div>
                     <div class="project-box">
-                    <a href="#"><p>Quiz App</p></a>
+                    <a href="#"><p class="no-transition">Quiz App</p></a>
                     </div>
                     <div class="project-box">
-                    <a href="#"><p>Countdown Timer</p></a>
+                    <a href="#"><p class="no-transition">Countdown Timer</p></a>
                     </div>
                     <div class="project-box">
-                    <a href="#"><p>Product Upcoming Page</p></a>
+                    <a href="#"><p class="no-transition">Product Upcoming Page</p></a>
                     </div>
                     </div>
                 </div>
@@ -83,19 +86,19 @@
                     <section class="reviews-row">
                         <h2 class="secondary-font">Reviews from my teachers</h2>
                         <div class="block-of-reviews">
-                            <div class="article-1">
+                            <div class="article-1 article">
                                 <p>Joshua is the best student I ever met.<br> 
                                     I should know since i'm him!</p>
                                 <p class="teacher-name">Aushua Jagbor</p>
                                 <p>Professor of Potions</p>
                             </div>
-                            <div class="article-2">
+                            <div class="article-2 article">
                                 <p>Super handsome and smart guy. <br>
                                     You should totally hire him!</p>
                                 <p class="teacher-name">Aushua Jagbor</p>
                                 <p>Professor of Potions</p>
                             </div>
-                            <div class="article-3">
+                            <div class="article-3 article">
                                 <p>The most humble student i've had. <br>
                                     He saved my pet cow from drowning!
                                 </p>
@@ -110,4 +113,11 @@
                     </footer>
                     </div>
 </body>
+<script>
+  const toggleButton = document.getElementById('theme-toggle');
+
+  toggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+  });
+</script>
 </html>
