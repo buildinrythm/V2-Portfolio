@@ -28,6 +28,11 @@ nav ul{
     list-style: none;
 }
 
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
 .hero{
     border: 2px solid black;
     text-align: center;
@@ -51,6 +56,7 @@ nav ul{
     display: flex;
     flex-direction: column;
     border-left: 2px solid black;
+    padding: 10px;
 }
 
 .main-columns > * {
@@ -59,15 +65,51 @@ nav ul{
 
 .projects-column{
     border-right:2px solid black ;
+    margin: 0;
 }
 
+.projects-column p{
+    margin: 0;
+padding: 20px 20px;
+}
+
+.projects-column h2 {
+    margin: 0;
+    padding: 20px 20px;
+}
+
+.projects-column a{
+    text-decoration: none;
+    color: inherit;
+}
+.experience-column h2 {
+    padding: 10px 10px;
+    margin: 0;
+}
+
+.education-column, h2, p{
+padding: 10px 10px;
+margin: 0;
+}
 .project-box {
     border-bottom: 2PX solid black;
-    background-color: grey;
+    background-color: rgb(187, 187, 187);
 }
 
+.project-list > :first-child {
+    border-top: 2px solid black;
+}
+
+.project-list > :last-child {
+    border-bottom: none;
+}
 .work-experience-block {
     border-bottom: 2px solid black;
+    padding: 10px 20px;
+}
+
+.open-source-block {
+    padding: 20px;
 }
 
 .reviews-row{
@@ -92,7 +134,11 @@ nav ul{
     padding: 20px;
 }
 
+.teacher-name{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
 footer{
-    border-bottom: 2px solid black;
+    
    text-align: center;
 }
