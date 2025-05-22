@@ -4,7 +4,7 @@ This is a responsive personal portfolio website built with **HTML** and **CSS**.
 
 ## 🌐 Live Demo
 
-[View Website](https://yourusername.github.io/your-portfolio-repo/)  
+[View Website](https://buildinrythm.github.io/V2-Portfolio/)  
 
 ---
 
@@ -54,8 +54,7 @@ logo.jpg
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/your-portfolio-repo.git
-
+   git clone https://github.com/buildinrythm/V2-Portfolio
    Open index.html in your browser.
 
 (Optional) Deploy on GitHub Pages or Netlify to make it live.
