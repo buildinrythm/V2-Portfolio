@@ -1,254 +1,201 @@
+/* ========================================================
+   RESET & GLOBALS
+======================================================== */
 * {
   box-sizing: border-box;
 }
 
-
-
 body {
   font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .secondary-font {
   font-family: 'Fira Code', monospace;
 }
 
-.site-container{
-    border: 2px solid black;
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  transition: color 0.3s ease;
 }
 
-nav{
-    display: flex;
-    justify-content: space-around;
-    gap: 50px;
+/* ========================================================
+   CONTAINER
+======================================================== */
+.site-container {
+  border: 2px solid black;
 }
 
-nav .nav-left{
-    display: flex;
+/* ========================================================
+   NAVIGATION
+======================================================== */
+nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  align-items: center;
+  padding: 1rem 0;
 }
+
+nav .nav-left {
+  display: flex;
+}
+
 nav img {
   height: 50px;
   width: auto;
 }
 
-nav ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 50px;
-    list-style: none;
+nav ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.nav-right{
-    display: flex;
-    gap: 20px;
-}
-nav a{
-    text-decoration: none;
-    color: inherit;
+.nav-right {
+  display: flex;
+  gap: 20px;
 }
 
-.hero{
-    border: 2px solid black;
-    text-align: center;
-    border-left: none;
-    border-right: none;
-    padding: 10%;
+.nav-right a {
+  padding: 20px;
+  display: flex;
 }
 
-
-.main-columns{
-    border-bottom: 2px solid black;
-    justify-content: space-around;
-    flex: 1;
-    padding: 1rem;
-    display: flex;
-    padding: 0;
-    margin: 0;
+/* ========================================================
+   HERO SECTION
+======================================================== */
+.hero {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  text-align: center;
+  padding: 10%;
 }
 
-.education-column{
-    display: flex;
-    flex-direction: column;
-    border-left: 2px solid black;
-    padding: 10px;
+/* ========================================================
+   MAIN CONTENT LAYOUT
+======================================================== */
+.main-columns {
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid black;
 }
 
 .main-columns > * {
   width: 100%;
 }
 
-.projects-column{
-    border-right:2px solid black ;
-    margin: 0;
+/* --- Projects Column --- */
+.projects-column {
+  border-right: 2px solid black;
 }
 
-.projects-column p{
-    margin: 0;
-padding: 20px 20px;
+.projects-column h2,
+.projects-column p {
+  margin: 0;
+  padding: 20px;
 }
 
-.projects-column h2 {
-    margin: 0;
-    padding: 20px 20px;
+.projects-column a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.projects-column a{
-    text-decoration: none;
-    color: inherit;
-}
-.experience-column h2 {
-    padding: 10px 10px;
-    margin: 0;
-}
-
-.education-column, h2, p{
-padding: 10px 10px;
-margin: 0;
-}
 .project-box {
-    border-bottom: 2PX solid black;
-    background-color: rgb(187, 187, 187);
+  border-bottom: 2px solid black;
+  background-color: rgb(187, 187, 187);
 }
 
 .project-list > :first-child {
-    border-top: 2px solid black;
+  border-top: 2px solid black;
+}
+
+/* --- Experience Column --- */
+.experience-column h2 {
+  margin: 0;
+  padding: 10px;
 }
 
 .work-experience-block {
-    border-bottom: 2px solid black;
-    padding: 10px 20px;
+  border-bottom: 2px solid black;
+  padding: 10px 20px;
 }
 
 .open-source-block {
-    padding: 20px;
+  padding: 20px;
+  border-top: none;
+  border-bottom: none;
 }
 
-.reviews-row{
-    border-bottom: 2px solid black;
-    text-align: left;
-    padding: 4%;
+/* --- Education Column --- */
+.education-column {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid black;
+  padding: 10px;
 }
 
-.reviews-row h2{
-    text-align: center;
+.education-column h2,
+.education-column p {
+  margin: 0;
+  padding: 10px;
 }
 
-.block-of-reviews {
-    display: flex;
-    justify-content: space-around;
-    gap: 60PX;
-}
-
-.article-1, .article-2, .article-3 {
-    border: 2px solid black;    
-    border-radius: 8px;
-    margin: 20px;
-    padding: 20px;
-}
-
-.teacher-name{
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-footer{
-    
-   text-align: center;
-}
-
-
-
-@media (max-width: 768px) {
-
-.site-container {
-    overflow: hidden;
-    flex-wrap: wrap;
-}
-
-.main-columns{
-    padding: 0;
-    margin: 0;
-}
-
-.projects-column{
-    padding: 0;
-    margin: 0;
-}
-
-
-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: center;
-    padding: 20px;
-    gap: 20px;
-    width: 100%;
-    text-align: center;
-}
-
-.nav-left{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    
-}
-
-.nav-right{
-    width: 100%;
-    display: block;
-    justify-content: space-around;
-    align-items: center;
-}
-.nav-right a{
-padding: 20px;
-display: flex;
-}
-
-
-  .main-columns {
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100vw;
-  }
-
-  .projects-column{
-    border-right: none;
-  }
-
-  .open-source-block {
-    border-bottom: 2px solid black;
-  }
-
-  .education-column{
-    border-left: none;
-  }
-
-  .block-of-reviews {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 60PX;
-}
-
-.article{
-    border: 2px solid black;    
-    border-radius: 8px;
-    margin: 0px;
-    padding: 10px 10px;
+/* ========================================================
+   REVIEWS SECTION
+======================================================== */
+.reviews-row {
+  border-bottom: 2px solid black;
+  text-align: left;
+  padding: 4%;
 }
 
 .reviews-row h2 {
-    padding: 40px 0;
-}
-.main-columns > * {
-  width: 100%;
+  text-align: center;
+  padding: 40px 0;
 }
 
+.block-of-reviews {
+  display: flex;
+  justify-content: space-around;
+  gap: 60px;
 }
 
-/* Default light theme */
+.teacher-name {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* ========================================================
+   ARTICLES
+======================================================== */
+.article-1,
+.article-2,
+.article-3,
+.article {
+  border: 2px solid black;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+}
+
+/* ========================================================
+   FOOTER
+======================================================== */
+footer {
+  text-align: center;
+}
+
+/* ========================================================
+   DARK MODE
+======================================================== */
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
@@ -256,7 +203,6 @@ display: flex;
   --border-color: #000000;
 }
 
-/* Dark mode overrides */
 .dark-mode {
   --bg-color: #000000;
   --text-color: #f0f0f0;
@@ -264,40 +210,92 @@ display: flex;
   --border-color: #cccccc;
 }
 
-.hero, nav, .main-columns, footer, .reviews-row,
-.work-experience-block, .open-source-block, .article
-  {
+/* Apply dynamic border colors in dark mode */
+.hero,
+nav,
+.main-columns,
+footer,
+.reviews-row,
+.work-experience-block,
+.open-source-block,
+.article {
   border: 1px solid var(--border-color);
   transition: border-color 0.3s ease;
 }
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
 
-a {
-  color: var(--accent-color);
-   transition: accent-color 0.3s ease;
-}
-
-.project-box{
-    transition: none;
-}
-
+/* Optional exception styling */
 .no-transition {
   color: black;
 }
 
-.open-source-block {
-    border-top: none;
-    border-bottom: none;
+/* Remove extra borders when stacked in mobile */
+.projects-column,
+.open-source-block,
+.work-experience-block {
+  border-bottom: none;
 }
 
-.projects-column{
-    border-bottom:  none;
+.work-experience-block {
+  border-top: none;
 }
 
-.work-experience-block{
-    border-top: none;
+/* ========================================================
+   RESPONSIVE DESIGN
+======================================================== */
+@media (max-width: 768px) {
+  .site-container {
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-left {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-right {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-columns {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+  }
+
+  .projects-column {
+    border-right: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .education-column {
+    border-left: none;
+  }
+
+  .block-of-reviews {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .article {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .main-columns > * {
+    width: 100%;
+  }
 }
