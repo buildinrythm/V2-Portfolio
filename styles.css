@@ -151,7 +151,32 @@ footer{
 }
 
 @media (max-width: 768px) {
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.nav-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-right a{
+padding: 20px;
+}
   .main-columns {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .projects-column{
+    border-right: none;
   }
 }
